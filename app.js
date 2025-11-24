@@ -25,7 +25,13 @@ app.get("/book-overview", (req, res) => {
   res.render("book_overview");
 });
 
-app.post("/api/login", (req, res) => {
+app.post("/api/login", async (req, res) => {
   const username = req.body.username;
   const password = req.body.password;
+
+  return res.send(createHash(password));
 });
+
+const createHash = async (payload) => {
+  return await bcrypt.hash(payload, 10);
+};
