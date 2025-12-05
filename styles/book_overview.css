@@ -3,4 +3,31 @@ tr,
 td {
   border: 1px solid black;
   border-collapse: collapse;
+  padding: 0.5rem;
+}
+
+table {
+  background-color: white;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchbar {
+  padding: 3rem 0rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.searchbar input {
+  height: 1.4rem;
+  width: 80%;
+}
+
+.searchbar button {
+  height: 30px;
+  width: 40px;
 }

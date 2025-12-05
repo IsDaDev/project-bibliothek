@@ -8,27 +8,32 @@
   </head>
   <body>
     <%- include('partials/navbar') %>
-    <div class="searchbar">
-      <input
-        type="text"
-        name="searchbar"
-        id="searchbar"
-        placeholder="Enter the name of a book or author to search for"
-      /><button id="searchbtn">Search</button>
+    <div class="container">
+      <div class="components">
+        <div class="searchbar">
+          <input
+            type="text"
+            name="searchbar"
+            id="searchbar"
+            placeholder="Search ..."
+          /><button id="searchbtn">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Author</th>
+              <th>Genre</th>
+              <th>ISBN</th>
+              <th>Available</th>
+            </tr>
+          </thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
     </div>
-    <table>
-      <thead>
-        <tr>
-          <th>Title</th>
-          <th>Author</th>
-          <th>Genre</th>
-          <th>ISBN</th>
-          <th>Available</th>
-        </tr>
-      </thead>
-      <tbody id="tbody"></tbody>
-    </table>
-
     <script>
       document
         .querySelector("#searchbtn")

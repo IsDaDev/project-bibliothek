@@ -17,6 +17,7 @@
 
 nav {
   display: flex;
+  background-color: white;
   justify-content: space-between;
 }
 
